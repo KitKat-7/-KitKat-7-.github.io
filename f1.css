@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+* {
+    padding:auto;
+	margin:auto;
+	box-sizing:border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #294E64;
+}
+
+/* naigation bar starts */
+
+header {
+    background-color: #1F2635; 
+    /* height: 14vh; */
+    max-height: 14vh;
+    width: 100%;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 30px;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    margin-left: -45px;
+}
+
+.webname {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: -60px;
+}
+
+#searchbar {
+    width: 400px;
+    border-radius:50px;
+    color: #000000;
+    float: left;
+    padding: 7px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
+}
+
+i {
+    padding: 9px;
+    background-color: white;
+    color: #000000;
+    border-radius: 50px;
+    margin-top: 3px;
+    border-color: black;
+    
+}
+
+.dummy-texts {
+    margin-top: -8px;
+    font-size: 12px;
+    color: #f1072e;
+}
+
+.how {
+    color: white;
+    margin-left: -240px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.how:hover {
+    color: #f1072e;
+}
+
+.user {
+    width: 16%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.login {
+    width: 80px;
+    color: rgb(29, 24, 24);
+    padding: 7px;
+    border-radius: 23px;
+    border-style: none;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.login:hover {
+    background-color: rgb(173, 18, 78);
+}
+
+.signup {
+    width: 80px;
+    color: rgb(29, 24, 24);
+    padding: 7px;
+    border-radius: 23px;
+    border-style: none;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.signup:hover {
+    background-color: rgb(173, 18, 78);
+}
+
+/* naigation bar ends */
+
+
+/* login form starts */
+
+.box {
+    display: none;
+    border-radius: 8px;
+    width: 300px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.950);
+}
+    
+    .box h1 {
+        color: #f1072e;
+        text-transform: uppercase;
+        
+        font-weight: 700;
+    }
+    
+    .box h3 {
+        background-color: #f1072e;
+        width: fit-content;
+        padding: 0 8px;
+        float: right;
+        margin-top: -74px;
+        margin-right: -25px;
+        border-radius: 10px;
+        cursor: pointer;
+        
+        
+    }
+
+    .box input[type="text"],.box input[type="password"] {
+        border: 0;
+        background:none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 3px solid #2b344d;
+        padding:14px 10px;
+        width: 220px;
+        outline: none;
+        color: white;
+        border-radius: 23px;
+        transition: 0.25px;
+    }
+    
+    .box input[type="text"]:focus, .box input[type="password"]:focus {
+        width: 250px;
+        border-color: #f1072e;
+    }
+    
+    .box input[type="submit"] {
+        border: 0;
+        background:none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 3px solid #f1072e;
+        padding:10px 10px;
+        outline: none;
+        color: white;
+        border-radius: 23px;
+        transition: 0.25px;
+        cursor: pointer;
+    }
+    
+    .box input[type="submit"]:hover {
+        background-color: #f1072e;
+    }
+
+    form .fpass {
+        color: #55678d;;
+        font-size: 12px;
+    }
+
+    form .fpass:hover {
+        color: #f1072e;
+    }
+
+    form a {
+        color: rgb(0, 0, 0);
+    }
+
+    .box p {
+        padding: 10px;
+        color: #55678d;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .box p:hover {
+        color: #f1072e;
+    }
+
+/* login form ends */
+
+
+/* signup form starts */
+
+.box2{
+    display: none;
+    border-radius: 8px;
+    width: 300px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.950);
+}
+
+    .box2 h1 {
+        color: #f1072e;
+        text-transform: uppercase;   
+        font-weight: 700;
+    }
+
+    .box2 h3 {
+        background-color: #f1072e;
+        width: fit-content;
+        padding: 0 8px;
+        float: right;
+        margin-top: -74px;
+        margin-right: -25px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .box2 input[type="text"],.box2 input[type="email"],.box2 input[type="password"] {
+        border: 0;
+        background:none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 3px solid #2b344d;
+        padding:5px 10px;
+        width: 220px;
+        outline: none;
+        color: white;
+        border-radius: 23px;
+        transition: 0.25px;
+    }
+
+    .box2 input[type="text"]:focus,.box2 input[type="email"]:focus, .box2 input[type="password"]:focus {
+        width: 250px;
+        border-color: #f1072e;
+    }
+
+    .box2 input[type="submit"] {
+        border: 0;
+        background:none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 3px solid #f1072e;
+        padding:5px 10px;
+        outline: none;
+        color: white;
+        border-radius: 23px;
+        transition: 0.25px;
+        cursor: pointer;
+    }
+
+    .box2 input[type="submit"]:hover {
+        background-color: #f1072e;
+    }
+
+    .checkmark {
+        
+        cursor: pointer;
+        display: flex;
+
+    }
+
+
+
+    .check {
+        color: rgba(255, 255, 250, 0.514);
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    #bbox {
+        cursor: pointer;
+    }
+
+    .box2 p {
+        color: #55678d;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .box2 p:hover {
+        color: #f1072e;
+    }
+
+/* signup form ends */
+
+
+.main-bg {
+    z-index: -1;
+    height: 1000px;
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-image: url(orange.jpg);
+}
+
+.bkimg img {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    float: left;
+}
+
+.burger {
+    display: none;
+}
+
+.fa-bars {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.usericon {
+    display: none;
+}
+
+
+
+

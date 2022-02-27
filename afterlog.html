@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>F1 Webpage</title>
+    <link rel="stylesheet" type="text/css" href="afterlog.css">
+    <link rel="stylesheet" href="afterlogmobile.css">
+    <script src="https://kit.fontawesome.com/7cc762561c.js" crossorigin="anonymous"></script>
+    <script>
+        function profile(){
+            document.getElementById("profile").style.display="block";
+            document.getElementById("main-content").style.display="none";
+            document.getElementById("buy-option").style.display="none";
+        }
+
+        function htb() {
+             var x = document.getElementById("buy-option");
+             var y = document.getElementById("main-content");
+             var z = document.getElementById("profile");
+             if (x.style.display === "block") {x.style.display = "none";y.style.display="block"; 
+            } else {    
+            x.style.display = "block"; y.style.display="none"; z.style.display="none";
+            }
+        }
+
+        // function htb() {
+        //     document.getElementById("buy-option").style.display="block";
+        //     document.getElementById("main-content").style.display="none";
+        //     document.getElementById("profile").style.display="none";
+        // }
+    </script>
+</head>
+<body>
+<!-- navigation starts -->
+    <header>
+        <div class="header-content">
+
+            <a id="logo" href="afterlog.html">
+                <img class="logo" id="screen1" src="f1.jpg">                 
+            </a>
+
+            <a id="webname" href="afterlog.html">
+            <div class="webname" id="screen1">F 1   Dollar</br>Webpage</div>
+            </a>
+
+            <div class="search" id="search">
+                <input type="search" placeholder="Search By Player's UID..." id="searchbar">
+                <i class="fa fa-search"></i>
+            </div>
+
+            <div class="dummy-texts" id="dtexts">
+                <p>1 Million Pixels  &#128312;  $1 Per Pixel</p>
+            </div>
+
+            <p >
+                <div onclick="htb()" class="how" id="how">&#128722; Buy Pixels</div>
+            </p>
+
+            <div class="user" id="user" onclick="profile()">
+                <img src="f1.jpg">
+                <h2>My Account</h2> 
+            </div>
+
+            <div class="usericon" onclick="profile()">
+                <button onclick="usericon()" class="dropbtn"><img src="f1profile.png"></src></button>
+
+        </div>
+    </header>
+<!-- navigation ends -->
+
+<!-- center image and main content starts -->
+
+<div class="main-bg" id="main-content">
+    <div class="bkimg">
+        <img src="f1.jpg">
+
+    </div>
+</div>
+
+<!-- center image and main content starts -->
+
+<!-- profile page starts -->
+
+<div class="profile" id="profile">
+    <div class="pro-header">
+        <img src="f1.jpg">
+        <h1>Your Name</h1>
+    </div>
+    <div class="details">
+        <h2>Your Details</h2>
+        <div class="detail-list">
+        <ul class="list1" >
+            <li>Your Username</li>
+            <li>Your U-ID</li>
+            <li>Your Mail Id</li>
+            <li>Pixels You Own</li>
+        </ul>
+        <ul class="list2">
+            <li>:</li>
+            <li>:</li>
+            <li>:</li>
+            <li>:</li>
+        </ul>
+        <ul class="list3">
+            <li>Your Username</li>
+            <li>Your U-ID</li>
+            <li>Your Mail Id</li>
+            <li>Pixels You Own</li>
+        </ul>
+        </div>
+    </div>
+    <a href="afterlog.html">
+    <div class="home">
+        <h2> <- Home</h2>
+    </div>
+    </a>
+    <a href="f1.html">
+    <div class="logout">
+        <h2>Log Out -></h2>
+    </div>
+    </a>
+</div>
+
+<!-- profile page ends -->
+
+<!-- buying option starts -->
+
+<form action="" class="buy-option" id="buy-option" method="post">
+    <h1>BUY PIXELS</h1>
+<div class="l-and-i">  
+    <div class="label">
+    <label for="p-height">Pixel Height:</label></br>
+    <label for="p-width">Pixel Width:</label></br>
+    <label for="p-uid" class="p-uid">U-ID:</label></br>
+    <label for="p-wp">Whatsapp Link:</label></br>
+    <label for="p-fb">Facebook ID Link:</label></br>
+    <label for="p-tg">Telegram Link:</label></br>
+    <label for="p-youtube">Youtube Channel Link:</label></br>
+    <label for="p-ig">Instagram ID Link:</label></br>
+    <label for="p-other">Other Links:</label></br>
+    </div>
+
+    <div class="input">
+    <input type="text" id="p-height" required></br>
+    <input type="text" id="p-width" required></br>
+    <input type="text" id="p-uid" required></br>
+    <input type="text" id="p-wp" ></br>
+    <input type="text" id="p-fb" ></br>
+    <input type="text" id="p-tg" ></br>
+    <input type="text" id="p-youtube" ></br>
+    <input type="text" id="p-ig"></br>
+    <input type="text" id="p-other" ></br>
+    </div>
+</div>
+<div class="file">
+    <input type="file" id="fileupload" required>
+</div> 
+    <input type="submit" id="sub-button" value="Buy Now">
+    
+     <a href="afterlog.html">
+        <div class="p-home">
+            <h2> <- Home</h2>
+        </div>
+        </a>
+        
+<div class="total">
+        <label for="total">Total Pixels:</label>
+        <input type="text" id="total">
+</div>
+
+</form>
+
+<!-- buying option ends -->
+
+</body>

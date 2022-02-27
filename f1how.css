@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+.htb {
+    display: none;
+}
+
+* {
+    padding:auto;
+	margin:auto;
+	box-sizing:border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.htb {
+    background-color: aqua;
+    text-align: center;
+}
+
+.h1 {
+    padding: 30px;
+}
+
+.para1 {
+    background-color: bisque;
+    padding: 20px;
+}
+
+.para1 h2 {
+    margin-top: -20px;
+    padding: 5px;
+}
+
+.para1 p {
+    text-align: left;
+    margin-left: 390px;
+    padding: 5px;
+}
+
+.para2 {
+    border-top: 15px solid aqua;
+    background-color: rgb(185, 132, 67);
+    padding: 20px;
+}
+
+.para2 h2 {
+    margin-top: -20px;
+    padding: 5px;
+}
+
+.para2 p {
+    text-align: left;
+    margin-left: 390px;
+    padding: 5px;
+}
+
+.register {
+    font-size: 25px;
+    background-color: rgb(255, 81, 0);
+    border: 3px solid black;
+    border-radius: 25px;
+    padding: 3px 15px;
+    cursor: pointer;
+}
+
+.register:hover {
+    background-color: rgb(255, 74, 104);
+}
+
+.home {
+    padding: 30px;
+}
+
+.htb-home{
+
+    border: 3px solid black;
+    border-radius: 25px;
+    width: 11%;
+    background-color: rgb(255, 136, 0);
+}
+
+.htb-home h2 {
+    color: black;
+    font-size: 20px;
+    padding: 3px 0;
+}
+
+.htb-home:hover {
+    background-color: aqua;
+}
+
+
+

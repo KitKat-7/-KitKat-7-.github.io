@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+* {
+    padding:auto;
+	margin:auto;
+	box-sizing:border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #294E64;
+}
+
+/* naigation bar starts */
+
+header {
+    background-color: #1F2635; 
+    /* height: 14vh; */
+    max-height: 14vh;
+    width: 100%;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-left: -45px;
+}
+
+.webname {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: -60px;
+}
+
+#searchbar {
+    width: 400px;
+    border-radius:50px;
+    color: #000000;
+    float: left;
+    padding: 7px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
+}
+
+i {
+    padding: 9px;
+    background-color: white;
+    color: #000000;
+    border-radius: 50px;
+    margin-top: 3px;
+    border-color: black;
+    
+}
+
+.dummy-texts {
+    margin-top: -8px;
+    font-size: 12px;
+    color: #f1072e;
+}
+
+.how {
+    color: white;
+    margin-left: -240px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.how:hover {
+    color: #f1072e;
+}
+
+.user {
+    background-color: #00000031;
+    width: 14%;
+    justify-content: space-between;
+    display: flex;
+    padding: 5px 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.user img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    
+}
+
+.user img {
+    border: 1.5px solid rgba(78, 139, 9, 0.774);
+}
+.user h2 {
+    font-size: 18px;
+    color: white;
+    font-weight: 100;
+}
+
+.main-bg {
+    z-index: -1;
+    height: 1000px;
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-image: url(orange.jpg);
+}
+
+.bkimg img {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    float: left;
+}
+
+
+
+.profile {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background-color: #a4b31e;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile img {
+    border: 2px solid rgba(78, 139, 9, 0.774);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.usericon {
+    display: none;
+}
+
+.details h2 {
+    margin: 10px 0;
+}
+
+
+
+.logout {
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 4px 8px;
+    background-color: #1F2635;
+    float: right;
+    margin-right: 20%;
+}
+
+.logout:hover {
+    border: 1px solid black;
+}
+
+.logout h2 {
+    font-weight: 200;
+    color: white;
+}
+
+.home {
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 4px 8px;
+    background-color: #1F2635;
+    float: left;
+    margin-left: 20%;
+}
+
+.home:hover {
+    border: 1px solid black;
+}
+
+.home h2 {
+    font-weight: 200;
+    color: white;
+}
+
+.detail-list {
+    font-size: 17px;
+    width: 40%;
+    display: flex;
+}
+
+.detail-list li{
+    margin: 30px 0;
+}
+
+.list1 , .list2 , .list3{
+    list-style: none;
+}
+
+.list1 {
+    text-align: left;
+}
+
+.list3 {
+    text-align: left;
+}
+
+/* Buy Option */
+
+.buy-option {
+
+    text-align: center;
+    background-color: #81f713;
+    width: 80%;
+    height: 102vh;
+    padding: 20px;
+}
+
+.l-and-i {
+    display: flex;
+    /* background-color: #f1072e; */
+    align-items: center;
+    width: 40%;
+}
+
+.label label {
+    font-size: 18px ;
+    /* background-color: #a4b31e; */
+    float: left;
+    margin: 6px 0px;
+
+}
+
+.label {
+    text-align: left;
+    /* background-color: #294E64; */
+}
+
+.input {
+    /* background-color: #000000; */
+    text-align: left;
+}
+.input input {
+        float: left;
+        margin: 6px 0;
+        border-radius: 10px;
+}
+
+.p-uid {
+    width: 100%;
+}
+
+.buy-option h1 {
+    margin: 10px 0;
+}
+
+#sub-button {
+    margin-top: 15px;
+    margin-left: -30%;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: 1000;
+    /* margin: 30px 0; */
+    padding: 5px 10px;
+    
+}
+
+#sub-button:hover {
+    background-color: #f1072e;
+}
+
+
+.p-home {
+    margin: 70px 0;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 4px 8px;
+    background-color: #1F2635;
+    float: left;
+    margin-left: 20%;
+}
+
+.p-home h2 {
+    font-weight: 200;
+    color: white;
+}
+
+.p-home:hover {
+    border: 1px solid black;
+}
+
+.total {
+    font-size: 18px;
+    margin-top: -33%;
+    width: 30%;
+    float: right;
+    /* background-color: aqua; */
+    
+}
+
+.total input {
+    border-radius: 10px;
+    width: 40px;
+}
+
+#buy-option {
+    display: none;
+}
+
+.file {
+    font-size: 18px;
+    margin-top: -25%;
+    margin-right: -5%;
+    width: 30%;
+    float: right;
+    /* background-color: aqua; */
+}
+

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>F1 Webpage</title>
+    <link rel="stylesheet" type="text/css" href="f1.css">
+    <link rel="stylesheet" href="f1how.css">
+    <link rel="stylesheet" href="f1mobile.css">
+    <script src="https://kit.fontawesome.com/7cc762561c.js" crossorigin="anonymous"></script>
+    
+<?php 
+
+    $showAlert = false; 
+    $showError = false; 
+    $exists=false;
+    
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+    include "dbconn.php";
+    
+    
+    $username = $_POST['username'];
+    $uid       = $_POST['uid'];
+    $mailid = $_POST['mailid'];
+    $password   = $_POST['password'];
+    $password2   = $_POST['password2'];
+    
+    $sql = "Select * from register where username='$username'";
+        
+        $result = mysqli_query($conn, $sql);
+        
+        $num = mysqli_num_rows($result); 
+    // This sql query is use to check if
+    // the username is already present 
+    // or not in our Database
+    
+    if($num == 0) {
+        if(($password == $password2) && $exists==false) {
+    
+            $hash = password_hash($password, 
+                                PASSWORD_DEFAULT);
+    // Password Hashing is used here.            
+    
+    $sql = "INSERT Into register ( username , uid , mailid , password ) values('$username','$uid','$mailid','$password')";
+    
+            $result = mysqli_query($conn,$sql);
+    
+            if ($result) {
+                $showAlert = true; 
+            }
+        } 
+        else { 
+            $showError = "Passwords do not match"; 
+        }      
+    }
+    
+    if($num>0) 
+       {
+          $exists="Username not available"; 
+       }
+    }
+
+?>
+
+
+
+
+
+
+    <script>
+        function login() {
+            document.getElementById("loginpage").style.display="block";
+            document.getElementById("signuppage").style.display="none";
+            document.getElementById("howtobuy").style.display="none";
+            document.getElementById("main-content").style.display="block";
+            document.getElementById("drop").style.display="none";
+        }
+
+        function signup() {
+            document.getElementById("signuppage").style.display="block";
+            document.getElementById("loginpage").style.display="none";
+            document.getElementById("howtobuy").style.display="none";
+            document.getElementById("main-content").style.display="block";
+            document.getElementById("drop").style.display="none";
+        }
+        function log2sign() {
+            document.getElementById("loginpage").style.display="none";
+            document.getElementById("signuppage").style.display="block";
+        }
+        function sign2log() {
+            document.getElementById("signuppage").style.display="none";
+            document.getElementById("loginpage").style.display="block";
+        }
+        function htb() {
+            document.getElementById("howtobuy").style.display="block";
+            document.getElementById("loginpage").style.display="none";
+            document.getElementById("signuppage").style.display="none";
+            document.getElementById("main-content").style.display="none";
+            document.getElementById("drop").style.display="none";
+        }
+        function usericon() {
+             document.getElementById("drop").classList.toggle("show");
+        }
+        function htb() {
+             var x = document.getElementById("howtobuy");
+             var y = document.getElementById("main-content");
+             var z = document.getElementById("loginpage");
+             var a = document.getElementById("signuppage");
+             if (x.style.display === "block") {x.style.display = "none"; y.style.display="block";
+            } else {    
+            x.style.display = "block"; y.style.display="none"; z.style.display="none"; a.style.display="none";
+            }
+        }
+    </script>
+    
+</head>
+
+
+<body>
+
+<?php 
+
+if($showAlert) {
+    
+    echo ' <div class="alert alert-success 
+        alert-dismissible fade show" role="alert">
+
+        <strong>Success!</strong> Your account is 
+        now created and you can login. 
+        <button type="button" class="close"
+            data-dismiss="alert" aria-label="Close"> 
+            <span aria-hidden="true">×</span> 
+        </button> 
+    </div> '; 
+}
+
+if($showError) {
+
+    echo ' <div class="alert alert-danger 
+        alert-dismissible fade show" role="alert"> 
+    <strong>Error!</strong> '. $showError.'
+
+   <button type="button" class="close" 
+        data-dismiss="alert aria-label="Close">
+        <span aria-hidden="true">×</span> 
+   </button> 
+ </div> '; 
+}
+    
+if($exists) {
+    echo ' <div class="alert alert-danger 
+        alert-dismissible fade show" role="alert">
+
+    <strong>Error!</strong> '. $exists.'
+    <button type="button" class="close" 
+        data-dismiss="alert" aria-label="Close"> 
+        <span aria-hidden="true">×</span> 
+    </button>
+   </div> '; 
+}
+
+?>
+
+
+
+
+
+<!-- navigation starts -->
+    <header>
+        <div class="header-content">
+
+            <a id="logo" href="f1.html">
+                <img class="logo" src="f1.jpg">                 
+            </a>
+
+            <a id="webname" href="f1.html">
+            <div class="webname" >F 1   Dollar</br>Webpage</div>
+            </a>
+
+            <div class="search" id="search">
+                <input type="search" placeholder="Search By Player's UID..." id="searchbar">
+                <i class="fa fa-search"></i>
+            </div>
+
+            <div class="dummy-texts" id="dtexts">
+                <p>1 Million Pixels  &#128312;  $1 Per Pixel</p>
+            </div>
+
+            <p >
+                <div onclick="htb()" class="how" id="how">&#128722; How to Buy</div>
+            </p>
+
+            <div class="user" id="user">
+                <button class="login" id="login" type="button" onclick="login()">LOG IN</button>
+                <button class="signup" id="signup" type="button" onclick="signup()">SIGN UP</button>
+            </div>
+
+            <div class="usericon">
+                <button onclick="usericon()" class="dropbtn"><img src="f1profile.png"></src></button>
+                <div id="drop" class="drop">            
+                    <h2 onclick="login()">LOG IN</h2>
+                    <h2 onclick="signup()">SIGN UP</h2>
+                </div>
+            </div>
+
+        </div>
+    </header>
+<!-- navigation ends -->
+
+<!-- login and signup starts -->    
+    <form class="box" id="loginpage" action="f1.php" method="post">
+        <h1>Log in</h1> 
+        <a href="f1.html"><h3 onclick="xlogin()">X</h1></a>
+            <input type="text" name="U-ID" placeholder="Enter U-ID" id="username" required>
+            <input type="password" name="Password" placeholder="Enter password" id="password" required>
+            <input type="submit" name="" value="Login">
+            <a class="fpass" href="">Forget Password</a>
+            <p class="log2sign" onclick="log2sign()">New User ,Click Here To Sign Up</p>
+    </form>
+    
+    <form class="box2" id="signuppage" action="f1.php" method="post">
+            <h1>sign up</h1>
+            <a href="f1.html"><h3 onclick="xsignup()">X</h1></a>
+            <div class="alert" id="alert"></div>
+            <input type="text" name="username" placeholder="User name" id="username2" required>
+            <input type="text" name="uid" placeholder="U-ID" id="uid" required>
+            <input type="text" name="mailid" placeholder="Mail Id" id="mail" required>
+            <input type="password" name="password" placeholder="Password" id="password2" required>
+            <input type="password" name="password2" placeholder="Re-Enter Password" id="password3" required>
+        
+            <div class="check">
+            <label for="bbox" class="checkmark">
+            <input type="checkbox" id="bbox" required>
+            I accept to the terms and conditions
+            </label>
+            </div>
+            <input id ="registerform" type="submit" name="" value="Signup">
+            <p class="sign2log" onclick="sign2log()">Existing User ,Click Here To Log In</p>
+    </form>
+<!-- login and signup ends -->
+
+<!-- How to Buy Section Starts -->
+    <div class="htb" id="howtobuy">
+        <h1 class="h1">
+            F1 <b style="color:red;">D</b>ollar Webpage
+        </h1>
+    <div class="para1">   
+    <h2>About</h2>
+    <p>
+        &#128312 Promote your FreeFire Id in the history of Internet</br>
+        &#128312 You can also promote your social media platforms through it</br>
+        &#128312 Find other popular players in our webpage</br>
+        &#128312 All you have to do is to buy a set of pixels for just $1/pixel</br>
+    </p>
+    </div> 
+
+    <div class="para2">
+    <h2>
+    How To Buy A Pixel?    
+    </h2>
+    <p>
+        &#128312 To buy pixels ,first you have to sign up and create your account here</br> 
+        &#128312 Then login in our website , then you can the buy option</br>
+        &#128312 Click the buy option and enter the valid details required</br>
+        &#128312 Select the number of pixels and buy it</br> 
+    </p>
+    </div>
+    
+    <div class="home">
+        <button class="register" type="button" onclick="signup()">Register</button>
+    </div>
+
+    <a href="f1.html">
+        <div class="htb-home">
+            <h2> <- Home</h2>
+        </div>
+        </a>
+
+    </div>
+<!-- How to Buy Section Starts -->
+
+<!-- center image and main content starts -->
+
+    <div class="main-bg" id="main-content">
+        <div class="bkimg">
+            <img src="f1.jpg">
+
+        </div>
+    </div>
+
+<!-- center image and main content starts -->
+
+
+
+
+</body>
+</html>

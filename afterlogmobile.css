@@ -1,0 +1,225 @@
+@media only screen and (max-width:1200px) {
+    /* header starts */
+    header {
+        display: flex;
+        height: 6vh;
+        width: 104%;
+    }
+    
+    .main-bg {
+        left: 52%;
+        transform: translate(-50%,0);
+    }
+    
+    .logo {
+        float: left;
+        padding-right: 20px;
+        width: 100px;
+        height: 80px;
+    }
+    
+    .webname {
+        padding-left: 30px;
+        text-align: center;
+        letter-spacing: 2px;
+        font-size: 20px;
+    }
+
+    .search {
+        display: flex;
+        border-radius: 7px;
+        width: 30%;
+    }
+    
+    #searchbar {
+        border: 3px solid black;
+        text-align: center;
+        border-radius: 7px;
+        padding: 15px 0;
+        width: 80%;
+    }
+    
+    i {
+        border-radius: 10px;
+        padding: 18px 18px;
+        margin: 3px 0;
+    }
+    
+    .dummy-texts {
+        font-size: 20px;
+        margin-right: -40px;
+    }
+    
+    .how {
+        font-size: 30px;
+    }
+    
+    .user {
+        display: none;
+    }
+
+    .dropbtn {
+        background-color:greenyellow ;
+        padding: 0 4px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    
+    .usericon {
+        display: block;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .usericon img{
+        margin-top: 4px;
+        width: 75px;
+        height: 75px;  
+    }
+
+/* buy page starts */
+
+.buy-option {
+    float: left;
+    width: 104%;
+    height: 100vh;
+}
+
+form h1 {
+    font-size: 60px;
+}
+
+.l-and-i {
+    font-size: 50px;
+    float: left;
+    /* background-color: aliceblue; */
+    width: 70%;
+}    
+
+.label label {
+    font-size: 30px;
+}
+
+.input input {
+    padding: 5px;
+    margin: 14px 0;
+}
+
+#sub-button {
+    margin-top:10%;
+    border-radius: 50px;
+    font-size: 38px;
+    font-weight: 1000;
+    padding: 11px 30px;
+    float: left;
+    margin-left: 6%;
+    
+}
+
+.p-home {
+    margin: 107px 0;;
+    border-radius: 0px;
+    padding: 8px 20px;
+    background-color: #1F2635;
+    margin-left: -60%;
+}
+
+.p-home h2 {
+    font-size: 35px;
+    font-weight: 200;
+    color: white;
+}
+
+.total {
+    font-size: 30px;
+    margin-top: -65%;
+    width: 25%;
+    float: right;
+    
+}
+
+.total input {
+    
+    padding-top:13px ;
+    border-radius: 10px;
+    width: 50px;
+}
+
+.file {
+    
+    margin-top: 1.5%;
+    margin-left: 28%;
+    width: 10%;
+    float: left;
+}
+
+#fileupload {
+    font-size: 30px;
+    margin-left: 5px;
+}
+/*buy page starts */
+
+/* profile page starts */
+.profile {
+    height: 100vh;
+    width: 104%;
+    padding: 40px;
+}
+
+.profile img {
+    border: 4px solid rgba(78, 139, 9, 0.774);
+    width: 180px;
+    height: 180px;
+}
+
+.profile h1 {
+    font-size: 50px;
+    margin: 4px 0;
+}
+
+.details h2 {
+    font-size: 35px;
+    margin: 7px 0;
+}
+
+
+
+.logout {
+    margin: 20px 0;
+    padding: 4px 8px;
+    margin-right: 10%;
+}
+
+
+.logout h2 {
+    font-size: 40px;
+}
+
+.home {
+    margin: 20px 0;
+    padding: 4px 8px;
+    margin-left: 10%;
+}
+
+.home h2 {
+    font-size: 40px;
+}
+
+.detail-list {
+    font-size: 30px;
+    width: 70%;
+    display: flex;
+}
+
+.detail-list li{
+    margin: 30px 0;
+}
+
+
+
+
+
+/* profile page starts */
+
+
+}   

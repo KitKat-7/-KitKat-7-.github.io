@@ -1,0 +1,265 @@
+@media only screen and (max-width:1200px) {
+/* header starts */
+header {
+    display: flex;
+    height: 6vh;
+    width: 104%;
+}
+
+.main-bg {
+    left: 52%;
+    transform: translate(-50%,0);
+}
+
+.logo {
+    float: left;
+    padding-right: 20px;
+    width: 100px;
+    height: 80px;
+}
+
+.webname {
+    padding-left: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.search {
+    display: flex;
+    border-radius: 7px;
+    width: 30%;
+}
+
+#searchbar {
+    border: 3px solid black;
+    text-align: center;
+    border-radius: 7px;
+    padding: 15px 0;
+    width: 80%;
+}
+
+i {
+    border-radius: 10px;
+    padding: 18px 18px;
+    margin: 3px 0;
+}
+
+.dummy-texts {
+    font-size: 20px;
+    margin-right: -40px;
+}
+
+.how {
+    font-size: 30px;
+}
+
+.user {
+    display: none;
+}
+
+.dropbtn {
+    padding: 0 4px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.usericon {
+    display: block;
+    position: relative;
+    display: inline-block;
+}
+
+.usericon img{
+    margin-top: 4px;
+    width: 75px;
+    height: 75px;
+
+}
+
+.drop {
+    text-align: center;
+    display: none;
+     position: absolute;
+    background-color: #f1f1f1;
+    width: 200px;
+    margin-left: -70px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.drop h2 {
+    
+    font-size: 35px;
+    color: black;
+    padding: 12px 16px;
+    display: block;
+}
+
+.show {
+    display: block;
+}
+/* header ends */
+
+/* how to buy page starts */
+.htb {
+    width: 104%;
+
+}
+
+.htb .para1 p{
+    margin-left: 0px;
+}
+
+.htb .para2 p{
+    margin-left: 0px;
+}
+/* how to buy page ends */
+
+/* login form starts */
+.box {
+    border-radius: 20px;
+    height: 37vh;
+    width: 70%;
+    padding: 30px;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%,-50%);
+}
+
+.box h1 {
+    font-size: 70px;
+    font-weight: 400;
+}
+
+.box h3 {
+    font-size: 40px;
+    padding: 0 18px;
+    margin-top: -130px;
+    margin-right: -25px;
+    border-radius: 10px; 
+}
+
+.box input[type="text"],.box input[type="password"] {
+    font-size: 40px;
+    margin: 50px auto;
+    padding:14px 10px;
+    width: 70%;
+    border-radius: 50px;
+}
+
+.box input[type="text"]:focus, .box input[type="password"]:focus {
+    width: 80%;
+}
+
+.box input[type="submit"] {
+    font-size: 40px;
+    margin: 50px auto;
+    padding:15px 25px;
+    border-radius: 50px;
+}
+
+form .fpass {
+    font-size: 30px;
+}
+
+.box p {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 30px;
+}
+/* login form ends */
+
+/* signup form starts */
+.box2{
+    background-position: fixed;
+    border-radius: 20px;
+    height: 60vh;
+    width: 80%;
+    padding: 30px;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%,-50%);
+}
+
+.box2 h1 {
+    font-size: 70px;
+    font-weight : 400;
+}
+
+.box2 h3 {
+    font-size: 40px;
+    padding: 0 18px;
+    margin-top: -130px;
+    margin-right: -25px;
+    border-radius: 10px;
+}
+
+.box2 input[type="text"],.box2 input[type="email"],.box2 input[type="password"] {
+    font-size: 40px;
+    margin: 50px auto;
+    padding:14px 10px;
+    width: 70%;
+    border-radius: 50px;
+}
+
+.box2 input[type="text"]:focus,.box2 input[type="email"]:focus, .box2 input[type="password"]:focus {
+    width: 80%;
+}
+
+.box2 input[type="submit"] {
+    font-size: 40px;
+    margin: 50px auto;
+    padding:15px 28px;
+    border-radius: 50px;
+}
+   
+.check {
+    width: 80%;
+    font-size:30px ;
+}
+
+#bbox {
+    height: 30px;
+    width: 30px;
+}
+
+.box2 p {
+    font-size: 30px;
+}
+
+/* how to buy page starts */
+.register {
+    padding: 5px 0px;
+    width: 42%;
+    font-size: 50px;
+}
+
+.htb-home {
+    width: 40%;
+}
+
+.htb-home h2{
+    
+    font-size: 50px;
+}
+/*how to buy page ends */
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
